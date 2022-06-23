@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>AdrensHR</title>
+    <head>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <section class="login-Page-S -S">
+            <div class="login-Page-D -D">
+                <div class="img-carousel">
+                    <img class="logo" src="images/logo.png">
+                    <div class="carousel-btn">
+                        <a class="carousel-arrow prev" onclick="plusSlides(-1)"><img src="images/left-arrow.png"></a>
+                        <a class="carousel-arrow" onclick="plusSlides(1)"><img src="images/right-arrow.png"></a>
+                    </div>
+                    <img class="google-play" src="images/google-play.png">
+                    <div class="carousel-item image-01">
+                        <div class="carousel-item-bg">
+                            <p class="carousel-item-text">JOIN. <br>CONNECT. <br>INTERACT.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item image-02">
+                        <div class="carousel-item-bg">
+                            <p class="carousel-item-text">FREE <br>SPEECH.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item image-03">
+                        <div class="carousel-item-bg">
+                            <p class="carousel-item-text">MAKE <br>AMERICA <br>GREAT AGAIN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-container">
+                    <h2 class="login-title">Create an account</h2>
+                    <p class="login-subtitle">We Do Not Sell User Information. EVER.</p>
+                    <input type="text" id="ip-name" class="login-input" placeholder="Name" required>
+                    <input type="text" id="ip-mail" class="login-input" placeholder="Email Address" required>
+                    <input type="password" id="ip-password" class="login-input" placeholder="Password" required>
+                    <input type="password" id="ip-confirm-password" class="login-input" placeholder="Confirm Password" required>
+                    <br><br>
+                    <label class="toggle">
+                        <input class="toggle__input" type="checkbox">
+                        <span class="toggle__label">
+                            <span class="toggle__text">By creating your account, you agree to our <a>Terms of Use</a> & <a>Privacy Policy</a>.</span>
+                        </span>
+                    </label>
+                    <div class="form-btn">Register</div>
+                    <p class="login-text">Already have a account? <a>Login</a></p>
+                </div>
+            </div>
+            <p class="login-text copyright">© Copyright 2022 America First Patriot, LLC | <a>About</a> | <a>Terms</a> | <a>Privacy</a> | <a>Contact</a></p>
+        </section>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("carousel-item");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slides[slideIndex-1].style.display = "block";  
+            }
+            </script>
+    </body>
+
+</html>
